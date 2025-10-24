@@ -1,21 +1,23 @@
 <?php
 namespace Src\Controllers;
 
+
 class UserController {
-    public function index() {
+     public function index() {
         echo json_encode([
             "success" => true,
             "data" => [
                 ["id" => 1, "name" => "Admin", "email" => "admin@example.com"],
-                ["id" => 2, "name" => "Novi", "email" => "novi@example.com"]
+                ["id" => 2, "name" => "Jefry", "email" => "jefry@example.com"]
             ]
         ]);
     }
 
+    
     public function show($id) {
         echo json_encode([
             "success" => true,
-            "data" => ["id" => $id, "name" => "User $id"]
+            "data" => ["id" => $id, "name" => "User " . $id]
         ]);
     }
 }
